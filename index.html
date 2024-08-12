@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мессенджер</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Мессенджер</h1>
+    </header>
+
+    <main>
+        <section id="login">
+            <h2>Регистрация</h2>
+            <form id="registrationForm">
+                <label for="phoneNumber">Введите номер телефона:</label>
+                <input type="tel" id="phoneNumber" placeholder="+7 (___) ___-__-__" required>
+                <button type="submit">Зарегистрироваться</button>
+            </form>
+            <div id="statusMessage"></div>
+        </section>
+
+        <section id="chat" style="display: none;">
+            <div class="chat-header">
+                <h2>Чат</h2>
+                <button onclick="logout()">Выйти</button>
+            </div>
+            <div class="chat-messages" id="chatMessages">
+                <!-- Сообщения будут добавляться сюда -->
+            </div>
+            <form id="messageForm">
+                <textarea id="messageContent" placeholder="Введите сообщение..." required></textarea>
+                <button type="submit">Отправить</button>
+            </form>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
